@@ -23,23 +23,48 @@ This project is maintained and developed by **Malcolm's Anatomy**, with the aim 
 ## Project Structure
 
 ```plaintext
-EHR-Malcolms-Anatomy/
-│
-├── ehr/                    # Main Django/Flask project directory
-│   ├── settings.py         # Project settings (Django-specific)
-│   ├── urls.py             # URL routing for the project
-│   └── wsgi.py             # WSGI application for deployment
-├── patients/               # Patient management app/module
-│   ├── models.py           # Database models (Patient, Appointment, etc.)
-│   ├── views.py            # Views for handling HTTP requests
-│   ├── forms.py            # Forms for patient data input
-│   └── urls.py             # URL routing for patients module
-├── static/                 # Static files (CSS, JavaScript, images)
-├── templates/              # HTML templates for the project
-│
-├── manage.py               # Command-line utility for Django/Flask
-├── requirements.txt        # Python dependencies
-└── README.md               # Project documentation
+/EHR-Malcolms-Anatomy
+├── backend/                   # Backend application code
+│   ├── app/                   # Main application folder
+│   │   ├── __init__.py        # Initializes the app package
+│   │   ├── models.py          # Database models (Patient, Appointment, etc.)
+│   │   ├── routes.py          # API routes/handlers
+│   │   ├── controllers.py      # Logic for processing requests
+│   │   ├── services.py        # Business logic (e.g., email notifications)
+│   │   └── utils.py           # Utility functions
+│   ├── migrations/            # Database migration files
+│   ├── tests/                 # Unit tests for the backend
+│   │   ├── test_models.py     # Tests for models
+│   │   ├── test_routes.py     # Tests for API endpoints
+│   │   └── test_integration.py # Integration tests
+│   ├── config.py              # Configuration settings (DB connection, etc.)
+│   ├── requirements.txt       # List of dependencies for the backend
+│   ├── .env                   # Environment variables (not to be committed)
+│   └── run.py                 # Entry point for the backend
+├── frontend/                  # Frontend application code
+│   ├── src/                   # Source code for the frontend
+│   │   ├── components/        # React/Vue components
+│   │   ├── pages/             # Different pages (e.g., Dashboard, Patient List)
+│   │   ├── styles/            # CSS/Sass styles
+│   │   ├── utils/             # Utility functions for frontend
+│   │   └── App.js             # Main application component
+│   ├── public/                # Public assets (images, icons, etc.)
+│   ├── tests/                 # Unit tests for the frontend
+│   │   ├── test_components.js  # Tests for components
+│   │   └── test_integration.js  # Integration tests
+│   ├── package.json           # Frontend dependencies and scripts
+│   ├── .env                   # Environment variables for frontend
+│   └── index.html             # Entry point for the frontend app
+├── docs/                      # Documentation for the project
+│   ├── architecture.md         # High-level architecture overview
+│   ├── user_guide.md           # User manual or guide
+│   └── api_reference.md         # API documentation
+├── scripts/                   # Any scripts for automation or deployment
+├── tests/                     # End-to-end or integration tests
+├── .gitignore                 # Git ignore file
+├── README.md                  # Project overview and instructions
+├── LICENSE                    # License for the project (MIT)
+└── .github/                   # GitHub-specific files (e.g., actions, issue templates)
 ```
 
 ---
