@@ -65,12 +65,14 @@ Once the connection is restored, the data will automatically sync with the cloud
 ## Contributing
 
 We welcome contributions to EHR - Malcolm's Anatomy. Here's how you can help:
+```bash
 
 Fork the repository.
 Create a branch for your feature (git checkout -b feature/amazing-feature).
 Commit your changes (git commit -m 'Add some amazing feature').
 Push to the branch (git push origin feature/amazing-feature).
 Open a Pull Request to discuss your changes.
+```
 
 ---
 
